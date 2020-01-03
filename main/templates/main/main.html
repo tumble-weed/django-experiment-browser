@@ -1,0 +1,11 @@
+{% load static %}
+<link rel = 'stylesheet' type = 'text/css' href = "{% static 'main/style.css' %}"> 
+{% if dirs %}
+    <ul>
+    {% for d in dirs %}
+    <li> <a href = "{% url 'main:inner' d %}" > {{ d }} </li>
+    {% endfor %}
+    </ul>
+{% else %} <p> no files given </p>
+{% endif %}
+<h1> Hi this is a template</h1>
